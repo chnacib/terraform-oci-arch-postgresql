@@ -32,7 +32,7 @@ resource "time_sleep" "postgresql_master_agent_checker" {
 
   triggers = {
     changed_time_stamp = length(data.oci_computeinstanceagent_instance_agent_plugins.postgresql_master_agent_plugin_bastion) != 0 ? 0 : timestamp()
-    instance_ocid  = oci_core_instance.postgresql_master.id
+    instance_ocid      = oci_core_instance.postgresql_master.id
   }
 }
 
@@ -43,7 +43,7 @@ resource "time_sleep" "postgresql_hotstandby1_agent_checker" {
 
   triggers = {
     changed_time_stamp = length(data.oci_computeinstanceagent_instance_agent_plugins.postgresql_hotstandby1_agent_plugin_bastion) != 0 ? 0 : timestamp()
-    instance_ocid  = oci_core_instance.postgresql_hotstandby1.0.id
+    instance_ocid      = oci_core_instance.postgresql_hotstandby1.0.id
   }
 }
 
@@ -54,7 +54,7 @@ resource "time_sleep" "postgresql_hotstandby2_agent_checker" {
 
   triggers = {
     changed_time_stamp = length(data.oci_computeinstanceagent_instance_agent_plugins.postgresql_hotstandby2_agent_plugin_bastion) != 0 ? 0 : timestamp()
-    instance_ocid  = oci_core_instance.postgresql_hotstandby2.0.id
+    instance_ocid      = oci_core_instance.postgresql_hotstandby2.0.id
   }
 }
 
