@@ -15,7 +15,7 @@ variable "release" {
 }
 
 variable "use_existing_vcn" {
-  type = bool
+  default = ""
 }
 
 variable "pg_whitelisted_ip" {
